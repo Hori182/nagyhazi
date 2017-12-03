@@ -5,6 +5,7 @@
 #include <string.h>
 #include <time.h>
 #include <ctype.h>
+#include <conio.h>
 
 #if defined(WIN32) || defined(_WIN32)
 #include <windows.h>
@@ -51,7 +52,7 @@ void kilepes(RANGLISTA *top, SOR *eleje)
 //menu:
 //ez a fuggveny irja ki a menupontokat, itt lehet kivalasztani, hogy a felhasznalo mit szeretne csinálni(jatek/dicsosegtabla megtekintese/kilepes)
 //a valasztastol fuggoen meghivja a megfelelo fuggvenyt
-void menu(RANGLISTA jatekos, SOR *eleje, RANGLISTA *top)
+int menu()
 {
     system("cls");
     printf("1. Uj jatek\n");
@@ -64,23 +65,7 @@ void menu(RANGLISTA jatekos, SOR *eleje, RANGLISTA *top)
 
     scanf("%d", &mvalaszt);
 
-    switch (mvalaszt)
-    {
-    //uj jatek inditasa
-    case  1:
-        jatek(jatekos, eleje, top);
-        break;
-    //ranglista megtekintese
-    case 2:
-        ranglista(top);
-        break;
-    //kilepes
-    case 3:
-        kilepes(top,eleje);
-        break;
-    default:
-        printf("Nincs ilyen lehetoseg, kerlek valassz ujra.");
-    }
+    return mvalaszt;
 }
 
 
@@ -486,9 +471,28 @@ int main()
     ranglista_beolvas(top);
     eleje=beolvas();
 
+    int valaszt;
+
     while (1)
     {
-        menu(jatekos, eleje, top);
+        valaszt=menu();
+        switch (valaszt)
+        {
+        //uj jatek inditasa
+        case  1:
+            jatek(jatekos, eleje, top);
+            break;
+        //ranglista megtekintese
+        case 2:
+            ranglista(top);
+            break;
+        //kilepes
+        case 3:
+            kilepes(top,eleje);
+            break;
+        default:
+            printf("Nincs ilyen lehetoseg, kerlek valassz ujra.");
+        }
     }
 
     return 0;
