@@ -173,8 +173,6 @@ void jatek(RANGLISTA jatekos, SOR *eleje, RANGLISTA *top)
     while(game)
     {
         system("cls");
-
-
         do
         {
             hanyadik=rand()%listahossz(eleje);
@@ -303,7 +301,6 @@ void jatek(RANGLISTA jatekos, SOR *eleje, RANGLISTA *top)
     jatekos.ido = (double)(end - start) / 1000;
 
     tope(top, jatekos.nev, jatekos.pont, jatekos.ido);
-
 }
 
 
@@ -348,11 +345,12 @@ void kozonseg(int *szazalek, char jo)
     szazalek[2]=rand()%szaz;
     szaz-=szazalek[2];
     szazalek[3]=szaz;
+
     int i;
     int db=0;
     for(i=0; i<4; i++)
     {
-        if(i!=jo-66 && db==0)
+        if(i!=jo-65 && db==0)
         {
             int temp=szazalek[i];
             szazalek[i]=szazalek[i+1];
@@ -365,7 +363,7 @@ void kozonseg(int *szazalek, char jo)
     }
 }
 
-//ranglista.txt be kell olvasni
+//ranglista.txt beolvassa
 
 void ranglista_beolvas(RANGLISTA *top)
 {
@@ -382,8 +380,6 @@ void ranglista_beolvas(RANGLISTA *top)
 
     while(fgets(line, 100,fptr))
     {
-
-
         sscanf(line,"%d;%[^;];%d;%lf\n",&h,nev,&p, &t);
 
         top[i].helyezes=h;
@@ -471,7 +467,6 @@ void lista_felszabadit(SOR *eleje)
         p = tmp;
     }
 }
-//kilepes fuggvenye
 
 
 int main()
