@@ -163,10 +163,33 @@ void jatek(RANGLISTA jatekos, SOR *eleje, RANGLISTA *top)
     char kivesz[2];
     int dbf=0,dbk=0;
 
+    int n=listahossz(eleje);
+    int volte[n];
+    int x=0;
+    bool van;
+    int j;
+    int hanyadik;
+
     while(game)
     {
         system("cls");
-        int hanyadik=rand()%listahossz(eleje);
+
+
+        do
+        {
+            hanyadik=rand()%listahossz(eleje);
+            van = false;
+            for (j = 0; j < x; j += 1)
+            {
+                if (volte[j] == hanyadik)
+                {
+                    van = true;
+                }
+            }
+        }
+        while (van);
+        volte[x]=hanyadik;
+        x++;
 
         SOR *mozgo;
         int i;
@@ -282,9 +305,7 @@ void jatek(RANGLISTA jatekos, SOR *eleje, RANGLISTA *top)
     tope(top, jatekos.nev, jatekos.pont, jatekos.ido);
 
 }
-/*bool volte() {
 
-}*/
 
 //felezos segitseg:
 void felezes(char *kivesz, SOR *mozgo)
@@ -293,17 +314,21 @@ void felezes(char *kivesz, SOR *mozgo)
     bool van;
     int j;
     char a;
-    for(i=0;i<2;i++)
+    for(i=0; i<2; i++)
     {
-        do {
+        do
+        {
             a=rand()%4+65;
             van = false;
-            for (j = 0; j < i; j++) {
-                if (kivesz[j] == a) {
+            for (j = 0; j < i; j++)
+            {
+                if (kivesz[j] == a)
+                {
                     van = true;
                 }
             }
-        } while (van || a==mozgo->jo);
+        }
+        while (van || a==mozgo->jo);
         kivesz[i]=a;
     }
 
@@ -404,12 +429,14 @@ void tope(RANGLISTA *top, char *nev, int pont, double ido)
 
 }
 
-void ranglista_rendez(RANGLISTA *top, int db) {
+void ranglista_rendez(RANGLISTA *top, int db)
+{
     int i, j;
 
     for (i = db-1; i > 0; --i)
         for (j = 0; j < i; ++j)
-            if (top[j+1].pont > top[j].pont) {
+            if (top[j+1].pont > top[j].pont)
+            {
                 RANGLISTA temp = top[j];
                 top[j] = top[j+1];
                 top[j+1] = temp;
