@@ -1,0 +1,109 @@
+# depslib dependency file v1.0
+1512321676 source:c:\tanulas\info\c\nagyhazi1203\main.c
+	<stdio.h>
+	<stdbool.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	<conio.h>
+	"jatek.h"
+	"menu.h"
+	<windows.h>
+
+1512321887 source:c:\tanulas\info\c\nagyhazi1203\jatek.c
+	"jatek.h"
+	<stdio.h>
+	<stdbool.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	<conio.h>
+
+1512321659 c:\tanulas\info\c\nagyhazi1203\jatek.h
+	"seged.h"
+
+1512318652 c:\tanulas\info\c\nagyhazi1203\jatek.c
+	"jatek.h"
+	<stdio.h>
+	<stdbool.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	<conio.h>
+
+1512319224 c:\tanulas\info\c\nagyhazi1203\menu.h
+
+1512321480 c:\tanulas\info\c\nagyhazi1203\seged.h
+
+1512321999 source:c:\tanulas\info\c\nagyhazi1203\menu.c
+	"menu.h"
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+
+1512321620 source:c:\tanulas\info\c\nagyhazi1203\seged.c
+	"seged.h"
+	<stdlib.h>
+
+1512326143 source:c:\users\aron\desktop\nagyhazi1203ififail\main.c
+	<stdio.h>
+	<stdbool.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	<conio.h>
+	"jatek.h"
+	"menu.h"
+	"ranglista.h"
+	"seged.h"
+	<windows.h>
+
+1512327053 c:\users\aron\desktop\nagyhazi1203ififail\jatek.h
+	"seged.h"
+	"ranglista.h"
+
+1512326339 c:\users\aron\desktop\nagyhazi1203ififail\seged.h
+
+1512319224 c:\users\aron\desktop\nagyhazi1203ififail\menu.h
+
+1512326339 source:c:\users\aron\desktop\nagyhazi1203ififail\seged.c
+	"seged.h"
+	<stdlib.h>
+	<stdbool.h>
+	<stdio.h>
+	<string.h>
+
+1512327065 source:c:\users\aron\desktop\nagyhazi1203ififail\jatek.c
+	"jatek.h"
+	<stdio.h>
+	<stdbool.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	<conio.h>
+
+1512325812 source:c:\users\aron\desktop\nagyhazi1203ififail\menu.c
+	"menu.h"
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+
+1512325844 c:\users\aron\desktop\nagyhazi1203ififail\ranglista.h
+
+1512325882 source:c:\users\aron\desktop\nagyhazi1203ififail\ranglista.c
+	"ranglista.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+
